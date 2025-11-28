@@ -24,7 +24,7 @@ public class Main {
                 // 1. ESTRATEGIA OPTIMISTA:(Ponemos el boolean en positivo y comprobamos el fallo.
                 // Al empezar cada intento, asumimos que el número es bueno (Verde).
                 // Si no ponemos esto a true aquí, se quedaría en false para siempre tras un error.
-                valido = true; // [4] Semáforo Verde (Reset)
+                valido = true; // [4] BANDERA VERDE (Reset)
 
                 // 2. Comprobamos si ya existe en los anteriores
                 for (int j = 0; j < i; j++) { // [5] Inspector J revisa historial
@@ -33,7 +33,7 @@ public class Main {
                         System.out.println(" Error: El número " + candidato + " ya lo has puesto. Prueba otro.");
 
                         // ¡Fallo! Bajamos la bandera a Rojo.
-                        valido = false;// [7] ¡CULPABLE! // Aqui hemos cambiado el boolean anterior a false entonces la condicion del while se cumple(repetimos do-while)
+                        valido = false;// [7] ¡BANDERA ROJA! // Aqui hemos cambiado el boolean anterior a false entonces la condicion del while se cumple(repetimos do-while)
                         break; // Dejamos de mirar, ya sabemos que está mal.
                     }
                 }
